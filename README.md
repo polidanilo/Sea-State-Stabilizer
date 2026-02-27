@@ -1,18 +1,18 @@
 # Sea-State Stabilizer (Gimbal Roll-Pitch)
 Work In Progress - Assembling hardware and components while fighting power distribution issues
 
+
 ## Project overview
-I wanted to design and build a 2-Degree-of-Freedom stabilization platform as a first project to finally put to use the bunch of servos, PCBs, cables and the ESP32 I had bought months ago with the idea of building myself a little robot. Nowadays, I want to focus more on marine robotics as ROVs / AUVs / USVs are a great interest of mine. I figured this idea could be a fine, simple enough way to break free of analysis paralysis and take a practical first step into marine technology, control theory, electronics and other fundamentals of robotics. 
+I wanted to design and build a 2-Degree-of-Freedom stabilization platform as a first project to finally put to use the bunch of servos, PCBs, cables and the ESP32 I had bought months ago with the idea of building myself a little robot. Nowadays, I want to focus more on marine robotics as ROVs / AUVs / USVs are a great interest of mine. I figured this idea could be a fine, simple enough way to break free of analysis paralysis and take a first step into marine technology, control theory, electronics and other fundamentals of robotics. 
 
-Its primary goal is to maintain a top-mounted sensor payload (HC-SR04 Ultrasonic Sensor and MPU6050) perfectly horizontal by actively compensating for external pitch and roll disturbances, simulating the motion of a boat on rough seas.
-
-## Core concepts
-Building this system from scratch serves as a practical deep-dive into:
+Its primary goal is to maintain a top-mounted sensor payload (HC-SR04 Ultrasonic Sensor and MPU6050) perfectly horizontal by actively compensating for external pitch and roll disturbances, simulating the motion of a boat on rough seas. Building this system from scratch serves as a practical dive into:
 * **Kinematics and CAD:** Forward and Inverse kinematics validation using Onshape, designing a mechanical architecture that isolates the electronics from the moving payload.
 * **Hardware and power management:** Managing high-current spikes from servo motors using an external power distribution system (PCA9685 and a dedicated 5V/3A PSU) to prevent microcontroller brownouts.
 * **Control theory:** Implementing a PID (Proportional-Integral-Derivative) controller and a Complementary/Kalman filter to process raw accelerometer and gyroscope data from the MPU6050 into smooth, actionable servo movements.
 
+
 ---
+
 
 ## Dev log
 
