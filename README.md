@@ -9,8 +9,6 @@ Its primary goal is to maintain a top-mounted sensor payload (HC-SR04 Ultrasonic
 * **Hardware and power management:** Managing high-current spikes from servo motors using an external power distribution system (PCA9685 and a dedicated 5V/3A PSU) to prevent microcontroller brownouts.
 * **Control theory:** Implementing a PID (Proportional-Integral-Derivative) controller and a Complementary/Kalman filter to process raw accelerometer and gyroscope data from the MPU6050 into smooth, actionable servo movements.
 
----
-
 ## Dev log
 With my Software Engineering and Database courses out of the way and with the end of the exam session, I wanted to try my hand at hardware. I jumped straight into wiring the ESP32 to the PCA9685 PWM driver; a 38-pin ESP32 is an absolute unit, takes up almost the entire width of a standard breadboard, and leaves no room to plug jumper wires on the sides. So I had to less-elegantly demote the breadboard to just an oversized power strip at the center of the system.
 
