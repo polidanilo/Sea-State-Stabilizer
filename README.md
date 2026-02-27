@@ -12,8 +12,6 @@ Its primary goal is to maintain a top-mounted sensor payload (HC-SR04 Ultrasonic
 ---
 
 ## Dev log
-
-### First steps
 With my Software Engineering and Database courses out of the way and with the end of the exam session, I wanted to try my hand at hardware. I jumped straight into wiring the ESP32 to the PCA9685 PWM driver; a 38-pin ESP32 is an absolute unit, takes up almost the entire width of a standard breadboard, and leaves no room to plug jumper wires on the sides. So I had to less-elegantly demote the breadboard to just an oversized power strip at the center of the system.
 
 Here is the initial wiring scheme:
