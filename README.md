@@ -9,6 +9,8 @@ Its primary goal is to maintain a top-mounted sensor payload (HC-SR04 Ultrasonic
 * **Hardware and power management:** Managing high-current spikes from servo motors using an external power distribution system (PCA9685 and a dedicated 5V/3A PSU) to prevent microcontroller brownouts.
 * **Control theory:** Implementing a PID (Proportional-Integral-Derivative) controller and a Complementary/Kalman filter to process raw accelerometer and gyroscope data from the MPU6050 into smooth, actionable servo movements.
 
+---
+
 ## Dev log
 With my Software Engineering and Database courses out of the way and with the end of the exam session, I wanted to try my hand at hardware. I jumped straight into wiring the ESP32 to the PCA9685 PWM driver; a 38-pin ESP32 is an absolute unit, takes up almost the entire width of a standard breadboard, and leaves no room to plug jumper wires on the sides. So I had to less-elegantly demote the breadboard to just an oversized power strip at the center of the system.
 
@@ -28,6 +30,7 @@ Despite the hardware gore, running a simple I2C scanner script and finally seein
 
 *[Placeholder for Draw.io schematic of the wiring and photos]*
 
+
 ### CAD Simulation
 To avoid frying more components and myself, I decided to step back and digitally model my intended design first. This gave me the opportunity to learn the basics of CAD! Though I must say web-based, German-only (my fault for not looking for the language settings hard enough) Onshape has been awful to me. The goal was to ensure the Roll-Pitch gimbal configuration could physically achieve the required angles without self-collision, prove the stabilization logic via Inverse Kinematics, and most importantly have a nice simulation to glare at while solving IRL complications.
 
@@ -36,6 +39,7 @@ To avoid frying more components and myself, I decided to step back and digitally
 
 **2. Inverse Kinematics:** By anchoring the sensor platform and freeing the base, this simulation demonstrates the core objective: the base (boat) moves chaotically, while the mechanical arms dynamically adapt to keep the payload perfectly horizontal.  
 *[Placeholder for POV Stabilization GIF here]* ![Inverse Kinematics](link_gif_2.gif)
+
 
 ### Prototyping, WIP
 So I moved from the desk, to the cloud, and now back to the desk. Currently assembling and wiring the hardware on my custom cardboard chassis. 
@@ -53,7 +57,7 @@ The final step to completion will involve fine-tuning the firmware in C++/Arduin
 
 ---
 
-## Bill of materials (BOM)
+## Bill of materials
 * **Microcontroller:** ESP32 (38-pin)
 * **IMU Sensor:** MPU6050 (6-axis Accelerometer & Gyroscope)
 * **Distance Sensor:** HC-SR04 Ultrasonic Module
